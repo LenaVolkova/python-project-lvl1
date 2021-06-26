@@ -4,10 +4,9 @@ jobs:
   linter-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out
       - uses: actions/checkout@v2
       - name: Linter 
-        run: |
+      - run: |
           pip install poetry
           make install
           make lint
