@@ -6,5 +6,4 @@ jobs:
     steps:
       - run: |
           pip install poetry
-          make install
           make lint
