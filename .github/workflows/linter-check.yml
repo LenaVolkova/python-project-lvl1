@@ -1,12 +1,12 @@
 name: Linter Check
 on: [push]
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: Linter
-        run: |
-          pip install poetry
-          make install
-          make lint
+  runs-on: ubuntu-latest
+  steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: Linter
+      run: |
+        pip install poetry
+        make install
+        make lint
