@@ -4,8 +4,9 @@ jobs:
   linter-check:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Linter 
         run: |
           pip install poetry
           make install
