@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-from brain_games.odd_even import welcome_user, check_answer, ask_question
+from brain_games.odd_even import welcome_user, get_answer, ask_question
+
+
+MAX_COUNT = 3
 
 
 def main():
@@ -8,22 +11,19 @@ def main():
     print("Answer \"yes\" if the number is even, otherwise answer \"no\".")
     count = 0
     true_answer = True
-    q_and_a = (0, 'yes')
     correct_answer = 'yes'
-    while count < 3 and true_answer:
-        q_and_a = ask_question()
-        true_answer = check_answer(q_and_a)
-        if true_answer:
+    user_answer = 'yes'
+    while count < MAX_COUNT and true_answer:
+        correct_answer = ask_question()
+        user_answer = get_answer()
+        if correct_answer == user_answer:
             count += 1
             print("Correct!")
         else:
-            if q_and_a[0] % 2 == 1:
-                correct_answer = "'yes'"
-            else:
-                correct_answer = "'no'"
+            true_answer = False
             print(
-                f'\'{q_and_a[1]}\' is wrong answer ;(.'
-                + f'Correct answer was {correct_answer}.')
+                f'\'{user_answer}\' is wrong answer ;(.'
+                + f'Correct answer was \'{correct_answer}\'.')
             print('Let\'s try again, {}!'.format(name))
     if true_answer:
         print('Congratulations, {}!'.format(name))

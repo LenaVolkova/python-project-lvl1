@@ -10,14 +10,14 @@ def welcome_user():
 
 def ask_question():
     random_number = randint(1, 100)
-    answer = prompt.string('Question: ' + str(random_number) + '\n')
-    return (random_number, answer)
-
-
-def check_answer(question_and_answer):
-    if question_and_answer[0] % 2 == 0 and question_and_answer[1] == 'yes':
-        return True
-    elif question_and_answer[0] % 2 == 1 and question_and_answer[1] == 'no':
-        return True
+    print('Question: {}'.format(random_number))
+    if random_number % 2 == 0:
+        answer = 'yes'
     else:
-        return False
+        answer = 'no'
+    return answer
+
+
+def get_answer():
+    answer = prompt.string('Your answer: ')
+    return answer
