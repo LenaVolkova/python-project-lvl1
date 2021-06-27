@@ -6,3 +6,5 @@
 ![example workflow](https://github.com/LenaVolkova/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
 <a href="https://asciinema.org/a/ha7XUGyJGkRdVxbmtmRcl6gjd" target="_blank"><img src="https://asciinema.org/a/ha7XUGyJGkRdVxbmtmRcl6gjd.svg" /></a>
+
+<script id="asciicast-kENFxIRxZbssrBUWfvh8LIYGQ" src="https://asciinema.org/a/kENFxIRxZbssrBUWfvh8LIYGQ.js" async></script>
