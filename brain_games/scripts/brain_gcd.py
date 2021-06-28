@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.scripts.brain_even import game
-from brain_games.games.calc import welcome_user, ask_question
+from brain_games.games.gcd import welcome_user, ask_question
 
 
 def main():

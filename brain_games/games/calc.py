@@ -22,18 +22,3 @@ def ask_question():
     else:
         answer = num1 * num2
     return str(answer)
-
-
-def get_answer():
-    answer = prompt.string('Your answer: ')
-    return answer
-
-
-def bye_user(correct_answer, user_answer, name):
-    if str(correct_answer) == user_answer:
-        print('Congratulations, {}!'.format(name))
-    else:
-        print(
-            f'\'{user_answer}\' is wrong answer ;(.'
-            + f'Correct answer was \'{correct_answer}\'.')
-        print('Let\'s try again, {}!'.format(name))

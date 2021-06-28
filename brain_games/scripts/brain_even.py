@@ -1,12 +1,28 @@
 #!/usr/bin/env python3
-from brain_games.games.odd_even import welcome_user, get_answer
-from brain_games.games.odd_even import ask_question, bye_user
+from brain_games.games.odd_even import welcome_user
+from brain_games.games.odd_even import ask_question
+import prompt
 
 
 MAX_COUNT = 3
 
 
-def game(welcome_user, ask_question, get_answer, bye_user):
+def get_answer():
+    answer = prompt.string('Your answer: ')
+    return answer
+
+
+def bye_user(correct_answer, user_answer, name):
+    if str(correct_answer) == user_answer:
+        print('Congratulations, {}!'.format(name))
+    else:
+        print(
+            f'\'{user_answer}\' is wrong answer ;(.'
+            + f'Correct answer was \'{correct_answer}\'.')
+        print('Let\'s try again, {}!'.format(name))
+
+
+def game(welcome_user, ask_question):
     print("Welcome to the Brain Games!")
     name = welcome_user()
     count = 0
@@ -22,7 +38,7 @@ def game(welcome_user, ask_question, get_answer, bye_user):
 
 
 def main():
-    game(welcome_user, ask_question, get_answer, bye_user)
+    game(welcome_user, ask_question)
 
 
 if __name__ == '__main__':
