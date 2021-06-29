@@ -14,7 +14,7 @@ def ask_question():
     step = randint(1, 10)
     size = randint(5, 10)
     missing_number = randint(0, size - 1)
-    question_str = ' '
+    question_str = ''
     i = 0
     while i < size:
         if i == missing_number:
