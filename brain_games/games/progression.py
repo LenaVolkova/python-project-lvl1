@@ -22,6 +22,6 @@ def ask_question():
         else:
             question_str = ' '.join([question_str, str(step * i + member)])
         i += 1
-    print('Question: ' + question_str)
+    print('Question:' + question_str)
     answer = member + missing_number * step
     return str(answer)
