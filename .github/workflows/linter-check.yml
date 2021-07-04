@@ -1,12 +1,20 @@
 name: Linter Check
 on: [push]
 jobs:
-  linter-check:
+  linter-check1:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
           source $HOME/.poetry/env
+          make install
+          make lint
+  linter-check2:
+    runs-on: linux-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          poetry pip install
           make install
           make lint

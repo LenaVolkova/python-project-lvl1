@@ -10,15 +10,15 @@ def welcome_user():
 
 
 def ask_question():
-    num1 = randint(1, 100)
-    num2 = randint(1, 100)
-    num3 = randint(0, 2)
-    operator = ('+', '-', '*')
-    print('Question: {} {} {}'.format(num1, operator[num3], num2))
-    if num3 == 0:
-        answer = num1 + num2
-    elif num3 == 1:
-        answer = num1 - num2
+    operand1 = randint(1, 100)
+    operand2 = randint(1, 100)
+    operator_number = randint(0, 2)
+    operators = ('+', '-', '*')
+    print('Question: {} {} {}'.format(operand1, operators[operator_num], operand2))
+    if operator_number == 0:
+        answer = operand1 + operand2
+    elif operator_number == 1:
+        answer = operand1 - operand2
     else:
-        answer = num1 * num2
+        answer = operand1 * operand2
     return str(answer)
