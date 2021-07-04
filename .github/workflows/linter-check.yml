@@ -11,7 +11,7 @@ jobs:
           make install
           make lint
   linter-check2:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
