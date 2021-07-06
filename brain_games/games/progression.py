@@ -6,9 +6,10 @@ def make_progression(member, step, size, missing_number):
     i = 0
     while i < size:
         if i == missing_number:
-            question_str = ''.join([question_str, ' ..'])
+            question_str = ''.join([question_str, '.. '])
         else:
-            question_str = ' '.join([question_str, str(step * i + member)])
+            question_str = ''.join([question_str, str(step * i + member)])
+            question_str = ''.join([question_str, ' '])
         i += 1
     return question_str
 
