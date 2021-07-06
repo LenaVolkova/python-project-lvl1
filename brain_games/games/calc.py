@@ -1,23 +1,19 @@
-import prompt
-from random import randint
+from random import randint, choice
 
 
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(name))
-    print("What is the result of the expression?")
-    return name
-
-
-def ask_question():
+def make_question():
     operand1 = randint(1, 100)
     operand2 = randint(1, 100)
-    operator_num = randint(0, 2)
-    oper = ('+', '-', '*')
-    print('Question: {} {} {}'.format(operand1, oper[operator_num], operand2))
-    if operator_num == 0:
+    oper = choice(['+', '-', '*'])
+    question = str(operand1) + ' ' + oper + ' ' + str(operand2)
+    answer = get_answer(operand1, oper, operand2)
+    return (question, answer)
+
+
+def get_answer(operand1, operator, operand2):
+    if operator == '+':
         answer = operand1 + operand2
-    elif operator_num == 1:
+    elif operator == '-':
         answer = operand1 - operand2
     else:
         answer = operand1 * operand2
