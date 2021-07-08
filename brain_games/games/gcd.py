@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 
 RULES = "Find the greatest common divisor of given numbers."
@@ -23,8 +23,8 @@ def evklid_algorithm(num1, num2):
 
 
 def make_question():
-    num1 = randint(MIN_NUMBER, MAX_NUMBER1)
-    num2 = randint(MIN_NUMBER, MAX_NUMBER2)
+    num1 = random.randint(MIN_NUMBER, MAX_NUMBER1)
+    num2 = random.randint(MIN_NUMBER, MAX_NUMBER2)
     question = '{} {}'.format(str(num1), str(num2))
     answer = str(evklid_algorithm(num1, num2))
     return (question, answer)

@@ -1,4 +1,4 @@
-from random import randint, choice
+import random
 
 
 RULES = "What is the result of the expression?"
@@ -7,9 +7,9 @@ MAX_NUMBER = 100
 
 
 def make_question():
-    operand1 = randint(MIN_NUMBER, MAX_NUMBER)
-    operand2 = randint(MIN_NUMBER, MAX_NUMBER)
-    oper = choice(['+', '-', '*'])
+    operand1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    operand2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    oper = random.choice(['+', '-', '*'])
     question = '{} {} {}'.format(str(operand1), oper, str(operand2))
     answer = get_answer(operand1, oper, operand2)
     return (question, answer)

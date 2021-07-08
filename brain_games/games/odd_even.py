@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 
 RULES = "Answer \"yes\" if the number is even, otherwise answer \"no\"."
@@ -7,7 +7,7 @@ MAX_NUMBER = 100
 
 
 def make_question():
-    number = randint(MIN_NUMBER, MAX_NUMBER)
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
     if number % 2 == 0:
         answer = 'yes'
     else:

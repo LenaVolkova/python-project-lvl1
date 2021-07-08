@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 
 RULES = "What number is missing in the progression?"
@@ -29,10 +29,10 @@ def get_missing_member(member, step, missing_number):
 
 
 def make_question():
-    first_member = randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
-    step = randint(MIN_STEP, MAX_STEP)
-    size = randint(MIN_SIZE, MAX_SIZE)
-    missing_number = randint(0, size - 1)
+    first_member = random.randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
+    step = random.randint(MIN_STEP, MAX_STEP)
+    size = random.randint(MIN_SIZE, MAX_SIZE)
+    missing_number = random.randint(0, size - 1)
     question = make_progression(first_member, step, size, missing_number)
     answer = str(get_missing_member(first_member, step, missing_number))
     return (question, answer)
