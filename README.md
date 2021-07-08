@@ -5,24 +5,24 @@
 
 ![example workflow](https://github.com/LenaVolkova/python-project-lvl1/actions/workflows/linter-check.yml/badge.svg)
 
-Проект состоит из нескольких скриптов, реализующих консольные игры. В каждом случае игра ведётся до 1 неправильного или трёх правильных ответов.
+Project consists of five scripts with console games. Each game ends after three correct answers or after first error.
 
 1. <b>BRAIN-EVEN</b> </n>
-Пользователь определеяет, является ли число чётным или нечётным
+The user answers if the number is odd or even
 [![asciicast](https://asciinema.org/a/iOSeinYOLRhwx3vpD8QBYJ3Vr.svg)](https://asciinema.org/a/iOSeinYOLRhwx3vpD8QBYJ3Vr)
 
 2. <b>BRAIN-CALC</b></n>
-Пользователь решает пример на сложение, умножение или разность
+The user solves arithmetic exercise (addition, substraction or multiplication)
 [![asciicast](https://asciinema.org/a/kENFxIRxZbssrBUWfvh8LIYGQ.svg)](https://asciinema.org/a/kENFxIRxZbssrBUWfvh8LIYGQ)
 
 3. <b>BRAIN-GCD</b></n>
-Пользователь находит наибольший общий делитель двух чисел
+The user finds the grater common divider of two random numbers
 [![asciicast](https://asciinema.org/a/ymC8A76x3sVxHTtOadnse3aid.svg)](https://asciinema.org/a/ymC8A76x3sVxHTtOadnse3aid)
 
 4. <b>BRAIN-PROGRESSION</b></n>
-Пользователь определяет пропущенного члена арифметической прогрессии
+The user finds missing member or arithmetic progression
 [![asciicast](https://asciinema.org/a/MKWnBrmcTj2zPpx9Za2TCySsv.svg)](https://asciinema.org/a/MKWnBrmcTj2zPpx9Za2TCySsv)
 
 5. <b>BRAIN-PRIME</b></n>
-Пользователь должен ответить, является ли число простым или нет
+The user answers if the number is prime or not
 [![asciicast](https://asciinema.org/a/ptAishWXl4fYkumhkZLbBfOBb.svg)](https://asciinema.org/a/ptAishWXl4fYkumhkZLbBfOBb)
