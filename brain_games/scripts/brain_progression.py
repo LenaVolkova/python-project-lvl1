@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.games.games_engine import game
-from brain_games.games.progression import make_question
+from brain_games.scripts.games_engine import game
+from brain_games.games.progression import make_question, RULES
 
 
 def main():
-    rules_string = "What number is missing in the progression?"
-    game(rules_string, make_question)
+    game(RULES, make_question)
 
 
 if __name__ == '__main__':

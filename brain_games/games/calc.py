@@ -1,11 +1,16 @@
 from random import randint, choice
 
 
+RULES = "What is the result of the expression?"
+MIN_NUMBER = 1
+MAX_NUMBER = 100
+
+
 def make_question():
-    operand1 = randint(1, 100)
-    operand2 = randint(1, 100)
+    operand1 = randint(MIN_NUMBER, MAX_NUMBER)
+    operand2 = randint(MIN_NUMBER, MAX_NUMBER)
     oper = choice(['+', '-', '*'])
-    question = str(operand1) + ' ' + oper + ' ' + str(operand2)
+    question = '{} {} {}'.format(str(operand1), oper, str(operand2))
     answer = get_answer(operand1, oper, operand2)
     return (question, answer)
 
