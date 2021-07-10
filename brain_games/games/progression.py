@@ -12,7 +12,7 @@ MAX_SIZE = 10
 
 def make_progression(first_member, step, size):
     progression = []
-    for i in range(0, size - 1):
+    for i in range(0, size):
         progression.append(first_member + step * i)
     return progression
 
@@ -21,7 +21,7 @@ def make_question():
     first_member = random.randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
     size = random.randint(MIN_SIZE, MAX_SIZE)
-    missing_number = random.randint(0, size - 1)
+    missing_number = random.randint(0, size)
     progression = make_progression(first_member, step, size)
     question = ''
     for i in range(0, size - 1):
