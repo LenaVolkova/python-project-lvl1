@@ -9,16 +9,16 @@ MAX_NUMBER = 100
 def make_question():
     operand1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     operand2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    oper = random.choice(['+', '-', '*'])
-    question = '{} {} {}'.format(str(operand1), oper, str(operand2))
-    answer = get_answer(operand1, oper, operand2)
+    sign = random.choice(['+', '-', '*'])
+    question = '{} {} {}'.format(str(operand1), sign, str(operand2))
+    answer = get_answer(operand1, sign, operand2)
     return (question, answer)
 
 
-def get_answer(operand1, operator, operand2):
-    if operator == '+':
+def get_answer(operand1, sign, operand2):
+    if sign == '+':
         answer = operand1 + operand2
-    elif operator == '-':
+    elif sign == '-':
         answer = operand1 - operand2
     else:
         answer = operand1 * operand2

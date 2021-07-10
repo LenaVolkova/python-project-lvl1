@@ -7,18 +7,18 @@ MAX_NUMBER = 4000
 
 
 def is_prime(num):
-    for i in range(2, num // 2):
-        if num % i == 0:
+    for divider in range(2, num // 2):
+        if num % divider == 0:
             return False
         else:
-            i += 1
+            divider += 1
     return True
 
 
 def make_question():
-    random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
-    question = str(random_number)
-    if is_prime(random_number):
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    question = str(number)
+    if is_prime(number):
         answer = 'yes'
     else:
         answer = 'no'
