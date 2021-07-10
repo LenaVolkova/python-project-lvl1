@@ -21,10 +21,10 @@ def make_question():
     first_member = random.randint(MIN_FIRST_MEMBER, MAX_FIRST_MEMBER)
     step = random.randint(MIN_STEP, MAX_STEP)
     size = random.randint(MIN_SIZE, MAX_SIZE)
-    missing_number = random.randint(0, size)
+    missing_number = random.randint(0, size - 1)
     progression = make_progression(first_member, step, size)
     question = ''
-    for i in range(0, size - 1):
+    for i in range(0, size):
         if i == missing_number:
             question = ''.join([question, '.. '])
         else:
