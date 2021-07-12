@@ -20,6 +20,8 @@ def get_answer(operand1, sign, operand2):
         answer = operand1 + operand2
     elif sign == '-':
         answer = operand1 - operand2
-    else:
+    elif sign == '*':
         answer = operand1 * operand2
+    else:
+        return "Uknown operation"
     return str(answer)

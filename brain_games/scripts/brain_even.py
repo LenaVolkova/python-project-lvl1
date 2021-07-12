@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.scripts.games_engine import run_game
-from brain_games.games.odd_even import make_question, RULES
+from brain_games.games_engine import run_game
+import brain_games.games.odd_even
 
 
 def main():
-    run_game(RULES, make_question)
+    run_game(brain_games.games.odd_even)
 
 
 if __name__ == '__main__':

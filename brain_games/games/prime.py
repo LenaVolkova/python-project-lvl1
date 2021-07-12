@@ -7,12 +7,13 @@ MAX_NUMBER = 4000
 
 
 def is_prime(num):
-    for divider in range(2, num // 2):
-        if num % divider == 0:
-            return False
-        else:
-            divider += 1
-    return True
+    if num == 0 or num == 1:
+        return False
+    else:
+        for divider in range(2, num // 2):
+            if num % divider == 0:
+                return False
+        return True
 
 
 def make_question():

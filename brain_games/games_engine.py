@@ -5,22 +5,20 @@ import prompt
 MAX_ROUNDS = 3
 
 
-def run_game(rules, make_question):
+def run_game(game):
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
-    print(rules)
-    count = 0
-    while count < MAX_ROUNDS:
-        question, correct_answer = make_question()
+    print(game.RULES)
+    for count in range(0, MAX_ROUNDS):
+        question, correct_answer = game.make_question()
         print('Question: {}'.format(question))
         user_answer = prompt.string('Your answer: ')
         if correct_answer == user_answer:
-            count += 1
             print("Correct!")
         else:
-            count = MAX_ROUNDS
-    if str(correct_answer) == user_answer:
+            break
+    if correct_answer == user_answer:
         print('Congratulations, {}!'.format(name))
     else:
         print(
