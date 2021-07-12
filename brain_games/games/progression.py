@@ -24,7 +24,7 @@ def make_question():
     missing_number = random.randint(0, size - 1)
     progression = make_progression(first_member, step, size)
     question = ' '.join(
-        [str(i) for i in progression[0:missing_number]]) + ' .. ' + ' '.join(
+        [str(i) for i in progression[0:missing_number]]) + '.. ' + ' '.join(
             [str(i) for i in progression[missing_number + 1:size]])
     answer = str(progression[missing_number])
     return (question, answer)
