@@ -1,7 +1,7 @@
 import random
 
 
-RULES = "What number is missing in the progression?"
+RULES = 'What number is missing in the progression?'
 MIN_FIRST_MEMBER = 0
 MAX_FIRST_MEMBER = 100
 MIN_STEP = 1
@@ -23,12 +23,7 @@ def make_question():
     size = random.randint(MIN_SIZE, MAX_SIZE)
     missing_number = random.randint(0, size - 1)
     progression = make_progression(first_member, step, size)
-    if missing_number == 0:
-        gap = '.. '
-    else:
-        gap = ' .. '
-    question = ' '.join(
-        [str(i) for i in progression[0:missing_number]]) + gap + ' '.join(
-            [str(i) for i in progression[missing_number + 1:size]])
     answer = str(progression[missing_number])
+    progression[missing_number] = '..'
+    question = ' '.join([str(i) for i in progression[0:size]])
     return (question, answer)

@@ -1,7 +1,7 @@
 import random
 
 
-RULES = "Find the greatest common divisor of given numbers."
+RULES = 'Find the greatest common divisor of given numbers.'
 MIN_NUMBER = 1
 MAX_NUMBER1 = 100
 MAX_NUMBER2 = 200
