@@ -1,13 +1,13 @@
 import random
 
 
-RULES = "Answer \"yes\" if the number is prime. Otherwise answer \"no\"."
+RULES = 'Answer "yes" if the number is prime. Otherwise answer "no".'
 MIN_NUMBER = 1
 MAX_NUMBER = 4000
 
 
 def is_prime(num):
-    if num == 0 or num == 1:
+    if num <= 1:
         return False
     else:
         for divider in range(2, num // 2):
