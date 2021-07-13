@@ -25,5 +25,5 @@ def make_question():
     progression = make_progression(first_member, step, size)
     answer = str(progression[missing_number])
     progression[missing_number] = '..'
-    question = ' '.join([str(i) for i in progression[0:size]])
+    question = ' '.join([str(i) for i in progression])
     return (question, answer)
